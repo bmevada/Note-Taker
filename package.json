@@ -6,9 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Bhavika Mevada",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^29.1.2"
   }
 }
