@@ -2,7 +2,7 @@ const router = require ('expresss').Router();
 const store = require ('../db/store');
 
 // GET "/api/notes" from database
-router.get('/notes', function(reg, res) => {
+router.get('/notes', (req, res) => {
     store
     .getNotes()
     .then((notes) => {
@@ -13,7 +13,8 @@ router.get('/notes', function(reg, res) => {
 });
 
 // POST (write) "/api/notes" from database
-router.post('/notes', function(req, res) => {
+router.post('/notes', (req, res) => {
+    store
     .addNote(req.body)
     .then((note) => {
         res.json(note)
@@ -22,7 +23,7 @@ router.post('/notes', function(req, res) => {
 });
 
 // DELETE "/api/notes" from database
-router.delete('/notes/:id', function(req,res) => {
+router.delete('/notes/:id', (req,res) => {
   store
   .removeNote(req.params.id)
   .then(() => res.json({ ok: true}))
