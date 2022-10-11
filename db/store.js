@@ -1,6 +1,6 @@
-const util = require ('util');
-const fs = require ('fs');
-const uuidv = require ('uuid');
+const util = require('util');
+const fs = require('fs');
+const uuidv = require('uuid');
 
 // Read and Write File
 const readFileAsync = util.promisify(fs.readFile);
@@ -12,28 +12,28 @@ class Store {
         return readFileAsync('db/db.json', 'utf8');
     }
     write(note) {
-        return writeFileAsync ('db/db.json', JSON.stringify(note));
+        return writeFileAsync('db/db.json', JSON.stringify(note));
     }
     // If there are notes
     getNotes({
         return this.read().then((notes) => {
             let parsedNotes;
-            
+
             // Otherwise, if there are no notes - send back an empty array
             try {
                 parsedNotes = [].concat(JSON.parse(notes));
             } catch (err) {
-                parsedNotes =[];
+                parsedNotes = [];
             }
             return parsedNotes = [];
-        })
-    })
-}
+        });
+    });
+};
 
-module.exports = new Store ();
+module.exports = new Store();
 
 class Store {
-    read () {
+    read() {
         return
     }
     getNotes()
