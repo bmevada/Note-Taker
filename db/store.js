@@ -1,6 +1,9 @@
 const util = require('util');
 const fs = require('fs');
-const uuidv = require('uuid');
+// const uuidv1 = require('uuid/v1');
+// const { v1: uuidv1 } = require('uuid')
+const {v4:uuidv4} = require( 'uuid');
+
 
 // Read and Write File
 const readFileAsync = util.promisify(fs.readFile);
@@ -15,7 +18,7 @@ class Store {
         return writeFileAsync('db/db.json', JSON.stringify(note));
     }
     // If there are notes
-    getNotes({
+    getNotes() {
         return this.read().then((notes) => {
             let parsedNotes;
 
@@ -25,17 +28,26 @@ class Store {
             } catch (err) {
                 parsedNotes = [];
             }
-            return parsedNotes = [];
+            return parsedNotes;
         });
-    });
-};
+    }
+
+    addNote(note) {
+        const {title, text} =note;
+        const newNote= {title, text, id: uuidv4()};
+        return this.getNotes()
+        .then((notes) =>[...notes, newNote])
+        .then((updatedNotes) => this.write(updatedNotes))
+        .then(() => newNote)
+    }
+}
 
 module.exports = new Store();
 
-class Store {
-    read() {
-        return
-    }
-    getNotes()
-}
+// class Store {
+//     read() {
+//         return
+//     }
+//     getNotes()
+// }
 
