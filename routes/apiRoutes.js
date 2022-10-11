@@ -1,5 +1,5 @@
-const router = require ('expresss').Router();
-const store = require ('../db/store');
+const router = require('expresss').Router();
+const store = require('../db/store');
 
 // GET "/api/notes" from database
 router.get('/notes', (req, res) => {
