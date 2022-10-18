@@ -38,11 +38,20 @@ THEN the user is presented with empty fields to enter a new note title and the n
 ## Mock-Up
 The following images show thw web application's appearance and functionality:
 
-Landing page:
+***Landing page:***
+<img width="1420" alt="landing-page" src="https://user-images.githubusercontent.com/109460560/196419709-30ee5329-ad33-46e3-9ba7-3f41fcd3cf68.png">
 
-Notes added:
 
-Notes removed:
+***Notes added:***
+<img width="1439" alt="add-task" src="https://user-images.githubusercontent.com/109460560/196419742-0f8dc5ac-1e38-4d6a-9722-e4d68b2bb54c.png">
+
+<img width="1424" alt="note-added" src="https://user-images.githubusercontent.com/109460560/196419772-05366672-c9f2-4e96-81c7-6768c34eaf1c.png">
+
+
+***Notes removed:***
+<img width="1420" alt="delete-function" src="https://user-images.githubusercontent.com/109460560/196419834-725a733d-6336-4ee6-ad22-7429fa7f5a70.png">
+
+
 
 ## Development Technologies Used
 * API and html routes
