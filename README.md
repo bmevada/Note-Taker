@@ -11,7 +11,7 @@ The application’s front end was already created. The back end of the applicati
 ## Deployed Links
 [Link to deployed Heroku] https://thawing-reef-14952.herokuapp.com/
 
-[Link to Github]
+[Link to Github] https://github.com/bmevada/Note-Taker.git
 
 ## User Story
 * AS A small business owner
@@ -19,6 +19,7 @@ The application’s front end was already created. The back end of the applicati
 * SO THAT I can organize my thoughts and keep track of tasks I need to complete
 
 ## Acceptance Criteria
+```rmd
 GIVEN the user is presented with a note-taking application
 WHEN the user opens the Note Taker
 THEN the user is presented with a landing page with a link to a notes page
@@ -32,6 +33,7 @@ WHEN the user clicks on an existing note in the list in the left-hand column
 THEN that note appears in the right-hand column
 WHEN the user clicks on the Write icon in the navigation at the top of the page
 THEN the user is presented with empty fields to enter a new note title and the note’s text in the right-hand column
+```
 
 ## Mock-Up
 The following images show thw web application's appearance and functionality:
