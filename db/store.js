@@ -2,7 +2,7 @@ const util = require('util');
 const fs = require('fs');
 // const uuidv1 = require('uuid/v1');
 // const { v1: uuidv1 } = require('uuid')
-const {v4:uuidv4} = require( 'uuid');
+const { v4: uuidv4 } = require('uuid');
 
 
 // Read and Write File
@@ -33,24 +33,22 @@ class Store {
     }
 
     addNote(note) {
-        const {title, text} =note;
-        const newNote= {title, text, id: uuidv4()};
+        const { title, text } = note;
+        const newNote = { title, text, id: uuidv4() };
         return this.getNotes()
-        .then((notes) =>[...notes, newNote])
-        .then((updatedNotes) => this.write(updatedNotes))
-        .then(() => newNote)
+            .then((notes) => [...notes, newNote])
+            .then((updatedNotes) => this.write(updatedNotes))
+            .then(() => newNote)
     }
 
-    removeNote(id) {
+    deleteNote(id) {
         return this.getNotes()
-        .filter(n => n !== id)
-        // .then((notes) =>[...notes, newNote])
-        // .then((updatedNotes) => this.write(updatedNotes))
-        // .then(() => res)
+            .then((notes) => notes.filter(n => n.id !== id))
+            .then((updatedNotes) => this.write(updatedNotes))
     }
-    
-    
 }
+
+
 
 module.exports = new Store();
 
