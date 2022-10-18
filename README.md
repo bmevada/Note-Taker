@@ -9,7 +9,8 @@ The application uses an Express.js back end and will save, retrieve and remove n
 The application’s front end was already created. The back end of the application was built and connected to the front end, and deployed the entire application to Heroku.
 
 ## Deployed Links
-[Link to deployed Heroku]
+[Link to deployed Heroku] https://thawing-reef-14952.herokuapp.com/
+
 [Link to Github]
 
 ## User Story
